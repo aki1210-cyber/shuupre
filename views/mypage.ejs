@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/mypage.css' />
+    <link rel='stylesheet' href='/stylesheets/reset.css' />
+    <link rel='stylesheet' href='/stylesheets/common.css' />
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+    <%- include("common/header") %>
+        <!-- ユーザー情報 -->
+        <div class="user_info">
+            <p>一言メッセージ：<%= content[0]["introduction"] %></p>
+        </div>
+        <div class="main_content">
+        <!-- 記事一覧 -->
+        <div class="articles">
+            <% for(x in content){ %>
+                <a href="/article/<%= content[x]['id'] %>">
+                <div class="content">
+                    <p class="title"><%= content[x]["title"] %></p>
+                    <p class="auth">投稿者：<%= content[x]["name"] %></p>
+                    <p class="add_time">投稿日時：<%= content[x]["create_date"] %></p>
+                </div>
+                </a>
+            <% } %>
+        </div>
+        <!-- お気に入りリスト -->
+        <div class="favo_articles">
+            <% for(x in favo_articles){ %>
+                <a href="/article/<%= favo_articles[x]['id'] %>">
+                <div class="content">
+                    <p class="title"><%= favo_articles[x]["title"] %></p>
+                    <p class="auth">投稿者：<%= favo_articles[x]["name"] %></p>
+                    <p class="add_time">投稿日時：<%= favo_articles[x]["create_date"] %></p>
+                </div>
+                </a>
+            <% } %>
+
+        </div>
+    </div>
+</body>
+</html>

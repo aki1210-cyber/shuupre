@@ -1,0 +1,35 @@
+.main_content{
+    position: relative;
+    top: 200px;
+    width: 800px;
+    margin: 0 auto;
+}
+.search_result{
+    width: 648px;
+}
+.search_result .content{
+    width: 600px;
+    height: 180px;
+    font-size: 1.2rem;
+    background-color:white;
+    border-radius: 0% 20% 0% 20%;
+    margin: 10px auto;
+    position: relative;
+}
+.search_result .title{
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+.search_result .auth{
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+.search_result .add_time{
+    color:darkgrey;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}

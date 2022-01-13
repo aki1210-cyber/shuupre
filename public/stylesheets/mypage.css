@@ -1,0 +1,101 @@
+.user_info{
+    position: relative;
+    top: 180px;
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+.main_content{
+    position: relative;
+    top: 200px;
+    display: flex;
+    flex-direction: row;
+}
+.articles{
+    width: 648px;
+    /* background-color: blueviolet; */
+}
+.articles .content{
+    width: 600px;
+    height: 180px;
+    font-size: 1.2rem;
+    background-color:white;
+    border-radius: 0% 20% 0% 20%;
+    margin: 10px auto;
+    position: relative;
+}
+.articles .title{
+    width: 550px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    overflow : hidden;
+    white-space : nowrap;
+    text-overflow: ellipsis;
+}
+.articles .auth{
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+.articles .add_time{
+    color:darkgrey;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+
+.articles .content:hover{
+    /* background-color: #ddd; */
+    transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+    box-shadow:10px 10px 20px 5px rgba(178, 0, 0, 0.5);
+}
+
+.favo_articles{
+    width: 432px;
+    /* background-color: blueviolet; */
+}
+.favo_articles .content{
+    width: 388px;
+    height: 116px;
+    font-size: 1.2rem;
+    background-color:white;
+    border-radius: 0% 20% 0% 20%;
+    margin: 10px auto;
+    position: relative;
+}
+.favo_articles .title{
+    width: 350px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    overflow : hidden;
+    white-space : nowrap;
+    text-overflow: ellipsis;
+}
+.favo_articles .auth{
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+.favo_articles .add_time{
+    color:darkgrey;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+
+.favo_articles .content:hover{
+    /* background-color: #ddd; */
+    transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+    box-shadow:10px 10px 20px 5px rgba(178, 0, 0, 0.5);
+}

@@ -1,0 +1,82 @@
+.main_content{
+    width: 900px;
+    height: 1500px;
+    margin: 0 auto;
+    padding: 100px;
+    position: relative;
+    background-color:white;
+    top: 180px;
+}
+#title{ 
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    background-color: pink;
+}
+.textbox {
+    width: 700px;
+    font-size: 3.125rem;
+    margin-left: 4px;
+    /* display: inline; */
+    /* margin: 1.2rem 0; */
+    background-color: purple;
+}
+.plus_icon{
+    width: 57px;
+    display: inline-block;
+    /* margin: 1.2rem;
+    margin-left: -80px; */
+    visibility: hidden;
+    background-color: saddlebrown;
+}
+.plus_icon:hover{
+    cursor: pointer;
+}
+.image_icon {
+    padding: 16px 28px;
+    /* background-image: url(../images/image.png);
+    background-size: cover; */
+    cursor: pointer;
+}
+input[type="file"] {
+    display: none;
+}
+
+.none{
+    display: none;
+}
+.icon_area{
+    display: none;
+    height: 57px;
+    background-image: url(../images/image.png);
+    background-size: cover;
+    cursor: pointer;
+    float: left;
+}
+
+.close_icon{
+    width: 57px;
+    display: inline-block;
+    margin-left: 80px;
+    display: none;
+    float: left;
+}
+.close_icon:hover{
+    cursor: pointer;
+}
+.preview{
+    height: 400px;
+}
+#submit{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+#form_area table{
+    margin-left: -60px;
+}

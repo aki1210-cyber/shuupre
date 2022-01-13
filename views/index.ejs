@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express</title>
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/reset.css' />
+    <link rel='stylesheet' href='/stylesheets/common.css' />
+  </head>
+  <body>
+    <div class="wrapper">
+    <!-- <div class="header_wrap">
+    <header class="header">
+      <a href="/"><img src="/images/logo.jpg" alt="ロゴ" class="logo_img"></a>
+      <form id="search" action="自分のサイトURL" method="get">
+        <input id="sbox" name="s" type="text" placeholder="キーワードを入力" />
+        <input id="sbtn" type="submit" value="検索" />
+      </form>
+      <% if (!session_id){%>
+      <a class="btn" id="login_btn" href="/login">ログイン</a>
+      <% } %>
+      <a class="btn" id="create_btn" href="/add">投稿</a>
+    </header>
+    </div> -->
+    <%- include("common/header") %>
+    <div class="main_content">
+      <!-- 4件表示予定 -->
+      <div class="new_articles">
+        <h2>新着記事</h2>
+        <% for(x in newarticles){ %>
+        <a href="/article/<%= newarticles[x]['id'] %>" class="article_btn">
+          <div class="content">
+            <p class="title"><%= newarticles[x]["title"] %></p>
+            <p class="auth">投稿者：<%= newarticles[x]["name"] %></p>
+            <p class="add_time">投稿日時：<%= newarticles[x]["create_date"] %></p>
+          </div>
+        </a>
+        <% } %>
+      </div>
+      <div class="rank_articles">
+        <h2>人気記事</h2>
+        <% for(y in rankings){ %>
+          <a href="/article/<%= rankings[y]['id'] %>" class="article_btn">
+            <div class="content">
+              <p class="title"><%= rankings[y]["title"] %></p>
+              <p class="auth">投稿者：<%= rankings[y]["name"] %></p>
+              <p class="add_time">投稿日時：<%= rankings[y]["create_date"] %></p>
+            </div>
+          </a>
+          <% } %>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

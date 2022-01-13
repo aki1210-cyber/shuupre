@@ -1,0 +1,26 @@
+<div class="header_wrap">
+    <header class="header">
+      <a href="/"><img src="/images/logo.png" alt="ロゴ" class="logo_img"></a>
+      <form id="search" action="/search" method="post">
+        <input id="sbox" name="keyword" type="text" placeholder="キーワードを入力" />
+        <input id="sbtn" type="submit" value="検索" />
+      </form>
+      <% if (!session_id){%>
+      <a class="btn" id="login_btn" href="/login">ログイン</a>
+      <% } %>
+      <% if (session_id){%>
+        <a class="btn" id="login_btn" href="/logout">ログアウト</a>
+      <% } %>
+      <% if (session_id){%>
+      <a class="btn" id="create_btn" href="/add">投稿</a>
+      <% } %>
+      <a class="btn" id="mypage_btn" href="/mypage">
+        <img src="/images/mypage.png">
+        <% if(session_name){ %>
+          <p><%= session_name %></p>
+        <% }else{ %>
+          <p>ゲスト</p>
+        <% } %>
+      </a>
+    </header>
+    </div>

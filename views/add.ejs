@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/add.css' />
+    <link rel='stylesheet' href='/stylesheets/reset.css' />
+    <link rel='stylesheet' href='/stylesheets/common.css' />    
+</head>
+<body>
+    <div class="wrapper">
+        <%- include("common/header") %>
+        <div class="main_content">
+            <form action="/add" id="form_area" name="article" method="post" enctype="multipart/form-data" autocomplete="off">
+                <p><input type="text" id="title" placeholder="タイトル" name="title"></p>
+                <!-- <p>
+                    <img src="/images/plus.png" alt="プラス" class="plus_icon" id="1">
+                    <input type="text" class="textbox" id="textbox1" onkeydown="addForm(event)">
+                    <div class="icon_area" id="icon1">
+                        <label class="image_icon">
+                            <input type="file" accept="image/*">
+                        </label>
+                    </div>
+                    <img src="#" class="preview">
+                </p> -->
+
+                <!-- <table>
+                    <tr>
+                        <td><img src="/images/plus.png" alt="プラス" class="plus_icon" id="1"></td>
+                        <td><input type="text" class="textbox" id="textbox1" onkeydown="addForm(event)">
+                            <div class="icon_area" id="icon1">
+                                <label class="image_icon">
+                                    <input type="file" accept="image/*">
+                                </label>
+                                <label class="link_icon">
+                                    <button class="none">ああ</button>
+                                </label>
+                            </div>
+                            <img src="#" class="preview" id="preview1">
+                        </td>
+                    </tr>
+                </table> -->
+                <!-- <input type="submit" id="submit" value="作成" onClick="submit();"> -->
+                <input type="submit" id="submit" value="作成" onClick="submit();">
+            </form>
+        </div>
+    </div>
+    <script src="javascripts/form.js"></script>
+</body>
+</html>

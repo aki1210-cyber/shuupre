@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express</title>
+    <link rel='stylesheet' href='/stylesheets/search_result.css' />
+    <link rel='stylesheet' href='/stylesheets/reset.css' />
+    <link rel='stylesheet' href='/stylesheets/common.css' />
+  </head>
+  <body>
+    <div class="wrapper">
+    <%- include("common/header") %>
+    <div class="main_content">
+      <div class="search_result">
+        <% for(x in content){ %>
+        <a href="/article/<%= content[x]['id'] %>">
+          <div class="content">
+            <p class="title"><%= content[x]["title"] %></p>
+            <p class="auth">投稿者：<%= content[x]["name"] %></p>
+            <p class="add_time">投稿日時：<%= content[x]["create_date"] %></p>
+          </div>
+        </a>
+        <% } %>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
